@@ -11,9 +11,11 @@ fun main(){
     println("$formatter")
 
     //secondary constructor
-    var customerObj=Customer();
+   /* var customerObj=Customer();
+    formatter=String.format("%s,%s",customerObj.name,customerObj.email)
+    println("$formatter")*/
+
+ var customerObj=Customer(34576769769);
     formatter=String.format("%s,%s",customerObj.name,customerObj.email)
     println("$formatter")
-
-
 }
