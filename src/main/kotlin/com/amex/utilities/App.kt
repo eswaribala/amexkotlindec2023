@@ -4,9 +4,16 @@ import com.amex.models.Customer
 
 fun main(){
 
-    //named arguments
-   var customer= Customer(accountNo=122343534,"Param","param@gmail.com",contactNo=9952032862)
+    //named arguments, primary constructor
+   var customer= Customer(_accountNo=122343534,"Param","param@gmail.com",_contactNo=9952032862)
 
-    println(customer)
+    var formatter=String.format("%s,%s",customer.name,customer.email)
+    println("$formatter")
+
+    //secondary constructor
+    var customerObj=Customer();
+    formatter=String.format("%s,%s",customerObj.name,customerObj.email)
+    println("$formatter")
+
 
 }
