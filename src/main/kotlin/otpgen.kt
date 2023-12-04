@@ -21,7 +21,13 @@ fun passwordGen(name:String,customerId: String):String{
 fun main(){
 
    println("Generated OTP=${otpgen()}")
-    println("Generated Password=${passwordGen("Parameswari","536546")}")
+    //string templates
+    var formatter=String.format("%s->%d",passwordGen("?%parameswari?*","458242543"),parseData("345845"))
+    println("Generated Password=$formatter")
+//print the amount in 10 digits
+    var amount=45845;
+    println(amount.toString().padStart(10,'*'));
+
 }
 
 
