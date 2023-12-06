@@ -24,6 +24,7 @@ package com.amex.models
 
 open class Customer{
 
+    open val code="C"
     var accountNo:Long=0;
     var name="";
     var email="";
