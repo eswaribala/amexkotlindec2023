@@ -24,13 +24,14 @@ package com.amex.models
 
 open class Customer{
 
-    open val code="C"
-    var accountNo:Long=0;
-    var name="";
-    var email="";
-    var password="";
-    var contactNo:Long=0;
-    lateinit var address:Address
+    internal open val code="C"
+    private var accountNo:Long=0;
+    protected var name="";
+    protected var email="";
+    protected var password="";
+    protected var contactNo:Long=0;
+    protected lateinit var address:Address
+    var bankName=""
    constructor (_accountNo:Long,_name:String,_email:String,_password:String="Test@123",_contactNo:Long,_address:Address) {
 
        //fields initialized with constructor parameters
