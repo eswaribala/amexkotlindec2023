@@ -4,4 +4,6 @@ class Corporate(_accountNo:Long,_name:String,_email:String,_password:String,_con
     Customer(_accountNo,_name,_email,_password,_contactNo,_address) {
 
     var companyType=_companyType
+
+   
 }
