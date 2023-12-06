@@ -29,7 +29,8 @@ class Customer{
     var email="";
     var password="";
     var contactNo:Long=0;
-   constructor (_accountNo:Long,_name:String,_email:String,_password:String="Test@123",_contactNo:Long) {
+    var address:Address
+   constructor (_accountNo:Long,_name:String,_email:String,_password:String="Test@123",_contactNo:Long,_address:Address) {
 
        //fields initialized with constructor parameters
        accountNo = _accountNo;
@@ -37,9 +38,10 @@ class Customer{
        email = _email;
        password = _password;
        contactNo = _contactNo;
+       address=_address
    }
     //secondary constructor
-    constructor(_accountNo:Long): this(_accountNo,"vignesh","viki@gmail.com","Test@123",99678901){
+    constructor(_accountNo:Long,address: Address): this(_accountNo,"vignesh","viki@gmail.com","Test@123",99678901,address){
 
     }
    //static variable
