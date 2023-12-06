@@ -9,6 +9,7 @@ fun main() {
 
     //anonymous function
     var find:(individual1: Individual, individual2: Individual) -> Boolean=fun(i1,i2):Boolean{
+
         return i1.dob.isBefore(i2.dob)
     }
 
