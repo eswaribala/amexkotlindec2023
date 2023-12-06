@@ -37,8 +37,13 @@ fun main(){
 
     var member=Member(3721476,"Parameswari")
 
-    println("${member.toString()}")
-    
+    var address=Address()
+    //setter
+   address.streetName="Gan"
+
+   println("Address=${address.streetName}")
+
+
 
 
 }
