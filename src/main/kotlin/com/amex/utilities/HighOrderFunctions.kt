@@ -5,7 +5,6 @@ import com.amex.models.Gender
 import com.amex.models.Individual
 import java.time.LocalDate
 
-
 fun validate(data:String,individual1:Individual,individual2: Individual,
              operation1:(String)->Boolean,
              operation2:(Individual,Individual)->Boolean): Boolean{
