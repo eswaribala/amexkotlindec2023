@@ -8,11 +8,9 @@ import java.time.LocalDate
 
 fun  main() {
 
-    val find=fun(individual1: Individual, individual2:Individual): Boolean{
+    //true lambda, it should not have fun keyword
+    var find:(individual1: Individual, individual2:Individual) -> Boolean={i1,i2->i1.dob.isBefore(i2.dob)}
 
-        return individual1.dob.isBefore(individual2.dob)
-
-    }
 
     var individual1=Individual(1353246, Address(),"Bala", Gender.FEMALE, LocalDate.of(1970,12,2))
     var individual2=Individual(1353289, Address(),"Manickam", Gender.MALE, LocalDate.of(1995,12,7))
