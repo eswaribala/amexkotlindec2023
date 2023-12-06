@@ -11,5 +11,9 @@ class Corporate(_accountNo:Long,_name:String,_email:String,_password:String,_con
         return super.showCustomerData()+","+this.companyType
     }
 
+    override fun logEvents() {
+        TODO("Not yet implemented")
+    }
+
 
 }

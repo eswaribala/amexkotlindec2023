@@ -8,7 +8,7 @@ class Address {
 
         field=value
     }
-        
+
 
     var streetName:String=""
         get()=field

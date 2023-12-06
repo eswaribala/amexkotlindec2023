@@ -22,7 +22,7 @@ package com.amex.models
 
 }*/
 
-open class Customer{
+abstract class Customer{
 
     internal open val code="C"
     private var accountNo:Long=0;
@@ -69,7 +69,7 @@ open class Customer{
         return this.name+","+this.contactNo
     }
 
-
+    abstract fun logEvents()
 
 
 }

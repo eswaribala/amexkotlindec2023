@@ -14,4 +14,8 @@ class Individual(_accountNo:Long,_address:Address,_surName:String, _gender: Gend
     override fun showCustomerData(): String {
         return this.name+","+this.gender+","+this.dob.toString()+","+this.bankName
     }
+
+    override fun logEvents() {
+        TODO("Not yet implemented")
+    }
 }
