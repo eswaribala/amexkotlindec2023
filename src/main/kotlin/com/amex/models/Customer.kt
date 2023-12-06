@@ -42,6 +42,23 @@ class Customer{
     constructor(_accountNo:Long): this(_accountNo,"vignesh","viki@gmail.com","Test@123",99678901){
 
     }
+   //static variable
+    companion object{
+        var counter=0
+       fun showData(): Int{
+           return counter;
+       }
+    }
+
+   //instance block and increment the counter
+    init{
+        counter++
+    }
+
+    //instance method
+    fun showCounter() : Int{
+        return counter
+    }
 
 }
 

@@ -16,7 +16,7 @@ fun main(){
     var contactNo: Long = readln().toLong();
     println("Enter Password");
     var password: String = readln();
-    //type chacking
+    //type checking
     println(accountNumber::class.java.typeName);
 
 

@@ -18,4 +18,15 @@ fun main(){
  var customerObj=Customer(34576769769);
     formatter=String.format("%s,%s",customerObj.name,customerObj.email)
     println("$formatter")
+
+    var customerObj1=Customer(34576769769);
+    formatter=String.format("%s,%s",customerObj1.name,customerObj1.email)
+    println("$formatter")
+    //static variable
+    println("Counter=${Customer.counter}")
+    //instance method
+    println("Counter=${customerObj1.showCounter()}")
+    //static method
+    println("Counter=${Customer.showData()}")
+
 }
