@@ -22,14 +22,14 @@ package com.amex.models
 
 }*/
 
-class Customer{
+open class Customer{
 
     var accountNo:Long=0;
     var name="";
     var email="";
     var password="";
     var contactNo:Long=0;
-    var address:Address
+    lateinit var address:Address
    constructor (_accountNo:Long,_name:String,_email:String,_password:String="Test@123",_contactNo:Long,_address:Address) {
 
        //fields initialized with constructor parameters
@@ -44,6 +44,7 @@ class Customer{
     constructor(_accountNo:Long,address: Address): this(_accountNo,"vignesh","viki@gmail.com","Test@123",99678901,address){
 
     }
+    constructor()
    //static variable
     companion object{
         var counter=0

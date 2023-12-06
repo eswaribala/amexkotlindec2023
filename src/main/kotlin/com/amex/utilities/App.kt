@@ -30,4 +30,7 @@ fun main(){
     //static method
     println("Counter=${Customer.showData()}")
 
+    var customerobj2=Customer()
+
+
 }

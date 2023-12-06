@@ -1,6 +1,7 @@
+import com.amex.models.Gender
 
 //data restrictions
-enum class Gender{MALE,FEMALE,TRANSGENDER}
+
 
 fun main(){
     println("Enter CIBIL Score")
