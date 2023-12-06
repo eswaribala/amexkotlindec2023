@@ -5,5 +5,7 @@ class Corporate(_accountNo:Long,_name:String,_email:String,_password:String,_con
 
     var companyType=_companyType
 
-   
+    override fun showCustomerData(): String {
+        return super.showCustomerData()+","+this.companyType
+    }
 }

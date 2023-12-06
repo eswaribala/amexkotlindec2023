@@ -63,5 +63,9 @@ open class Customer{
         return counter
     }
 
+   open fun showCustomerData():String{
+        return this.name+","+this.contactNo
+    }
+
 }
 
