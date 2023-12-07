@@ -19,7 +19,12 @@ fun main() {
         "Bala", Gender.FEMALE, LocalDate.of(Random.nextInt(1960,2022),Random.nextInt(1,12),
                Random.nextInt(1,26))))
 
-    individualSubSystem.getAllIndividuals().forEach{it->println("${it.accountNo},${it.dob.toString()}")}
+    individualSubSystem.getAllIndividuals()
+        .sortedWith(Comparator<Individual>{
+                i1,i2-> i1.dob.compareTo(i2.dob)
+
+        })
+        .forEach{it->println("${it.accountNo},${it.dob.toString()}")}
 
     println(individualSubSystem.getIndividualById(1234467))
     individualSubSystem.updateIndividual(Individual(1234467, Address(),
