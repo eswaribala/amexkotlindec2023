@@ -2,7 +2,7 @@ package com.amex.models
 
 import java.time.LocalDate
 
-class Account {
+class Account{
     var runningTotals: Long=0
     lateinit var openingDate: LocalDate
 

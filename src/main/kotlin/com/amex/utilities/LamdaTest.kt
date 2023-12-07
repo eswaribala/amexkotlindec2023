@@ -6,7 +6,7 @@ import com.amex.models.Individual
 import java.time.LocalDate
 
 
-fun  main() {
+fun  main():Unit {
 
     //true lambda, it should not have fun keyword
     var find:(individual1: Individual, individual2:Individual) -> Boolean={i1,i2->i1.dob.isBefore(i2.dob)}

@@ -8,6 +8,12 @@ import java.sql.Connection
 import java.sql.DriverManager
 import java.util.*
 
+fun throwError(): Nothing{
+    throw UrlNotFound()
+    println("thrown exception")
+}
+
+
 object DbHelper {
 
     val url: String?
@@ -22,7 +28,7 @@ object DbHelper {
 
         url = resource.getString("url")
         if(url==null){
-            throw UrlNotFound()
+            throwError()
         }
         try {
             userName = resource.getString("username")
