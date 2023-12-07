@@ -8,6 +8,8 @@ import java.sql.Connection
 class IndividualSubSystem:IndividualFacade {
    var connection:Connection? = null
 
+   lateinit var individualsList:MutableList<Individual>
+
     init {
         try {
             connection = DbHelper.getConnection()
@@ -15,24 +17,29 @@ class IndividualSubSystem:IndividualFacade {
         catch(classNotFoundException:ClassNotFoundException){
             println("Mysql Driver Missing....")
         }
+
+        individualsList= mutableListOf<Individual>()
     }
     override fun addIndividual(individual: Individual): Boolean {
-        TODO("Not yet implemented")
+         individualsList.add(individual)
     }
 
     override fun getAllIndividuals(): List<Individual> {
-        TODO("Not yet implemented")
+        return individualsList
     }
 
     override fun getIndividualById(accountNo: Long): Individual {
-        TODO("Not yet implemented")
+
+        return individualsList.filter { it->it.accountNo==accountNo }.first()
     }
 
     override fun updateIndividual(individual: Individual): Individual {
-        TODO("Not yet implemented")
+        var position:Int=individualsList.indexOf(individualsList.filter { it->it.accountNo==individual.accountNo }.first())
+        individualsList.set(position,individual)
     }
 
     override fun deleteIndividual(accountNo: Long) {
-        TODO("Not yet implemented")
+      var position:Int=individualsList.indexOf(individualsList.filter { it->it.accountNo==accountNo }.first())
+        individualsList.removeAt(position)
     }
 }

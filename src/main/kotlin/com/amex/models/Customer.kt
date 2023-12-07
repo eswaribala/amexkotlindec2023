@@ -25,7 +25,7 @@ package com.amex.models
 abstract class Customer{
 
     internal open val code="C"
-    private var accountNo:Long=0;
+    var accountNo:Long=0;
     protected var name="";
     protected var email="";
     protected var password="";
