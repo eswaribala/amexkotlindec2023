@@ -12,6 +12,11 @@ fun main(){
         memberMap.put(Random.nextInt(1,1000), Member(Random.nextInt(1,100000).toLong(),"Member"+key))
     }
 
-    memberMap.forEach{(key,value)->println("$key, ${value}")}
+    memberMap
 
+        .forEach{(key,value)->println("$key, ${value}")}
+
+    var sorted=memberMap.toSortedMap()
+    sorted.keys.forEach{it->println("${it}")}
+    //sorted.values.forEach{it->println("${it}")}
 }
