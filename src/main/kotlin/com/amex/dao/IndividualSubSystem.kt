@@ -21,7 +21,7 @@ class IndividualSubSystem:IndividualFacade {
         individualsList= mutableListOf<Individual>()
     }
     override fun addIndividual(individual: Individual): Boolean {
-         individualsList.add(individual)
+        return individualsList.add(individual)
     }
 
     override fun getAllIndividuals(): List<Individual> {
@@ -36,6 +36,7 @@ class IndividualSubSystem:IndividualFacade {
     override fun updateIndividual(individual: Individual): Individual {
         var position:Int=individualsList.indexOf(individualsList.filter { it->it.accountNo==individual.accountNo }.first())
         individualsList.set(position,individual)
+        return individualsList.filter { it->it.accountNo==individual.accountNo }.first()
     }
 
     override fun deleteIndividual(accountNo: Long) {
