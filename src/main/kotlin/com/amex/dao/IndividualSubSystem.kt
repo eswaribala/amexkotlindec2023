@@ -1,9 +1,21 @@
 package com.amex.dao
 
 import com.amex.facades.IndividualFacade
+import com.amex.helpers.DbHelper
 import com.amex.models.Individual
+import java.sql.Connection
 
 class IndividualSubSystem:IndividualFacade {
+   var connection:Connection? = null
+
+    init {
+        try {
+            connection = DbHelper.getConnection()
+        }
+        catch(classNotFoundException:ClassNotFoundException){
+            println("Mysql Driver Missing....")
+        }
+    }
     override fun addIndividual(individual: Individual): Boolean {
         TODO("Not yet implemented")
     }

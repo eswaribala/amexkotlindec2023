@@ -40,7 +40,12 @@ object DbHelper {
         driver=resource.getString("driver")
     }
     fun getConnection(): Connection? {
-        Class.forName(driver)
+        try {
+            Class.forName(driver)
+        }
+        catch(classNotFoundException:ClassNotFoundException){
+            throw classNotFoundException
+        }
         return DriverManager.getConnection(url,userName, password)
     }
 
