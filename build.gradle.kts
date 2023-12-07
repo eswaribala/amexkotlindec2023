@@ -13,6 +13,10 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    implementation("com.mysql:mysql-connector-j:8.1.0")
+
+
     testImplementation(kotlin("test"))
 }
 
