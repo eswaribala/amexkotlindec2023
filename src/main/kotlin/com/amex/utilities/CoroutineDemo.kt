@@ -13,17 +13,17 @@ fun main() {
     //creating the coroutine
    GlobalScope.launch {
        println("User Thread Starts->${Thread.currentThread().name}")
-       delay(1000)
+      // delay(1000)
        orgName.toCharArray().forEach { it->
            run {
 
                println("$it")
-               delay(500)
+               delay(50)
            }
        }
        println("User Thread Ends->${Thread.currentThread().name}")
 
    }
-    Thread.sleep(2000)
+    Thread.sleep(5000)
     println("Main Ends->${Thread.currentThread().name}")
 }
