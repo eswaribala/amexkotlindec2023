@@ -7,10 +7,6 @@ var orgName="RPS Consulting Services"
 fun main() {
     //This main Thread
     println("Main Starts->${Thread.currentThread().name}")
-
-
-
-
     //1250ms
     //creating the coroutine
     //global scope
