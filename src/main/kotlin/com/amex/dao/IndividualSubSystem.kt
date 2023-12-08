@@ -8,18 +8,17 @@ import java.sql.Connection
 class IndividualSubSystem:IndividualFacade {
    var connection:Connection? = null
 
-   lateinit var individualsList:MutableList<Individual>
+  var individualsList:MutableList<Individual> = mutableListOf<Individual>()
 
-    init {
-        try {
-            connection = DbHelper.getConnection()
-        }
-        catch(classNotFoundException:ClassNotFoundException){
-            println("Mysql Driver Missing....")
-        }
+    /* init {
+   try {
+          connection = DbHelper.getConnection()
+      }
+      catch(classNotFoundException:ClassNotFoundException){
+          println("Mysql Driver Missing....")
+      }
 
-        individualsList= mutableListOf<Individual>()
-    }
+    }*/
     override fun addIndividual(individual: Individual): Boolean {
         return individualsList.add(individual)
     }
