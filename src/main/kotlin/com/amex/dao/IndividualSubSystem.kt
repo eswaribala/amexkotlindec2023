@@ -10,7 +10,7 @@ class IndividualSubSystem:IndividualFacade {
 
   var individualsList:MutableList<Individual> = mutableListOf<Individual>()
 
-    /* init {
+    init {
    try {
           connection = DbHelper.getConnection()
       }
@@ -18,7 +18,7 @@ class IndividualSubSystem:IndividualFacade {
           println("Mysql Driver Missing....")
       }
 
-    }*/
+    }
     override fun addIndividual(individual: Individual): Boolean {
         return individualsList.add(individual)
     }
