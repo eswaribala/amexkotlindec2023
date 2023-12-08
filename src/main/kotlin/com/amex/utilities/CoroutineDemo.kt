@@ -1,10 +1,7 @@
 package com.amex.utilities
 
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import kotlin.concurrent.thread
 
 fun main() {
@@ -13,14 +10,10 @@ fun main() {
     var orgName="RPS Consulting Services"
 
 
-    thread{
-        println("User Thread Starts->${Thread.currentThread().name}")
-        Thread.sleep(10000)
-        println("User Thread Ends->${Thread.currentThread().name}")
-    }
 
     //1250ms
     //creating the coroutine
+    //global scope
    GlobalScope.launch {
        println("User Thread Starts->${Thread.currentThread().name}")
       // delay(2000)
@@ -29,13 +22,23 @@ fun main() {
            run {
 
                println("$it")
-               delay(500)
+               delay(50)
            }
        }
        println("User Thread Ends->${Thread.currentThread().name}")
 
    }
- //Thread.sleep(2000)
+    //local scope
+    runBlocking {
+         launch {
+             println("Local Scope Routing Starts->${Thread.currentThread().name}")
+             delay(1000)
+             println("Local Scope Routing Starts->${Thread.currentThread().name}")
+         }
+    }
+
+
+ Thread.sleep(2000)
 
     println("Main Ends->${Thread.currentThread().name}")
 }
