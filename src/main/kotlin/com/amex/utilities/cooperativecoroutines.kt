@@ -23,10 +23,9 @@ fun main()= runBlocking{
 
     }
 
-
     //main thread waits for coroutine to complete the job
     //we can avoid writing delay or sleep
-    job.join()
+  job.join()
 
     println("Main Ends->${Thread.currentThread().name}")
 
