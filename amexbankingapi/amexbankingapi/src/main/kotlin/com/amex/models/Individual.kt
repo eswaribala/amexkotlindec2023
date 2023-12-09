@@ -9,14 +9,14 @@ import kotlinx.serialization.encoding.Encoder
 
 import java.time.LocalDate
 import java.util.*
-object DateSerializer : KSerializer<Date> {
+/*object DateSerializer : KSerializer<Date> {
     override val descriptor = PrimitiveSerialDescriptor("Date", PrimitiveKind.LONG)
     override fun serialize(encoder: Encoder, value: Date) = encoder.encodeLong(value.time)
     override fun deserialize(decoder: Decoder): Date = Date(decoder.decodeLong())
-}
-@kotlinx.serialization.Serializable
+}*/
+@Serializable
 data class Individual(var _accountNo:Long,var _address:Address,var _surName:String, var _gender: Gender,
-                      @Serializable(DateSerializer::class) var _dob: Date):Customer(_accountNo,_address)
+                       var _dob: String)
     //override variable
    // override val code="CI"
 

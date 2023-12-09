@@ -34,7 +34,7 @@ dependencies {
 // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-serialization-runtime
    // implementation("org.jetbrains.kotlinx", "kotlinx-serialization-runtime", "1.0-M1-SNAPSHOT")
 // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-serialization-runtime
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc")
+  //  implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc")
 
     // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
     implementation("com.mysql:mysql-connector-j:8.1.0")
