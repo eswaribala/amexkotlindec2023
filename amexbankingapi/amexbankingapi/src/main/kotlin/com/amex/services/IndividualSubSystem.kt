@@ -29,17 +29,17 @@ class IndividualSubSystem:IndividualFacade {
 
     override fun getIndividualById(accountNo: Long): Individual {
 
-        return individualsList.filter { it->it.accountNo==accountNo }.first()
+        return individualsList.filter { it->it._accountNo==accountNo }.first()
     }
 
     override fun updateIndividual(individual: Individual): Individual {
-        var position:Int=individualsList.indexOf(individualsList.filter { it->it.accountNo==individual.accountNo }.first())
+        var position:Int=individualsList.indexOf(individualsList.filter { it->it._accountNo==individual._accountNo }.first())
         individualsList.set(position,individual)
-        return individualsList.filter { it->it.accountNo==individual.accountNo }.first()
+        return individualsList.filter { it->it._accountNo==individual._accountNo }.first()
     }
 
     override fun deleteIndividual(accountNo: Long) {
-      var position:Int=individualsList.indexOf(individualsList.filter { it->it.accountNo==accountNo }.first())
+      var position:Int=individualsList.indexOf(individualsList.filter { it->it._accountNo==accountNo }.first())
         individualsList.removeAt(position)
     }
 }

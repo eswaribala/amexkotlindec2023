@@ -3,21 +3,13 @@ package com.amex.models
 
 import kotlinx.serialization.Contextual
 import java.time.LocalDate
-@kotlinx.serialization.Serializable
-class Individual:Customer{
-    var surName:String
-    var gender:Gender
-    @Contextual
-    var dob:LocalDate
-    constructor(_accountNo:Long,_address:Address,_surName:String, _gender: Gender,_dob:LocalDate){
+import java.util.*
 
-        surName=_surName;
-        gender=_gender
-        dob=_dob
-    }
+@kotlinx.serialization.Serializable
+data class Individual(var _accountNo:Long,var _address:Address,var _surName:String, var _gender: Gender,
+                       var _dob: String
+)
     //override variable
    // override val code="CI"
 
 
-
-}
