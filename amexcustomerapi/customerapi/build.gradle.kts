@@ -32,9 +32,12 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.data:spring-data-rest-hal-explorer")
-    implementation("org.springdoc:springdoc-openapi-data-rest:1.6.15")
-    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.15")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.15")
+  //  implementation("org.springdoc:springdoc-openapi-data-rest:1.6.15")
+  //  implementation("org.springdoc:springdoc-openapi-kotlin:1.6.15")
+  //  implementation("org.springdoc:springdoc-openapi-ui:1.6.15")
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
+
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
