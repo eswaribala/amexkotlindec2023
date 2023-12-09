@@ -1,4 +1,4 @@
-package com.amex.customerapp.models
+package com.amex.customerapi.models
 
 import jakarta.persistence.Column
 import jakarta.persistence.Embeddable

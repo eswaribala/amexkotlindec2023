@@ -1,10 +1,8 @@
-package com.amex.customerapp.models
+package com.amex.customerapi.models
 
 import io.swagger.v3.oas.annotations.media.Schema
 import jakarta.persistence.*
 import lombok.Data
-import java.time.LocalDate
-
 
 
 @Entity
@@ -18,7 +16,7 @@ open class Customer {
     @Schema(hidden = true)
    open var accountNumber:Long = 0
     @Embedded
-   open lateinit var fullName:FullName
+   open lateinit var fullName: FullName
    @Column(name="Contact_No")
    open var contactNumber:Long = 0
     @Column(name="Email", nullable = false, length = 100)

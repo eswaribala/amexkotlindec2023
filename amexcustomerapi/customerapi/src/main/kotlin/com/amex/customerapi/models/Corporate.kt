@@ -1,5 +1,7 @@
-package com.amex.customerapp.models
+package com.amex.customerapi.models
 
+import com.amex.customerapi.models.CompanyType
+import com.amex.customerapi.models.Customer
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.Enumerated

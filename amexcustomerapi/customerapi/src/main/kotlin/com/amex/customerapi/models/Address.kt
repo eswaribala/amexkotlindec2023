@@ -1,5 +1,6 @@
-package com.amex.customerapp.models
+package com.amex.customerapi.models
 
+import com.amex.customerapi.models.Customer
 import jakarta.persistence.*
 
 
@@ -16,6 +17,7 @@ data class Address(@Id @GeneratedValue(strategy= GenerationType.IDENTITY) @Colum
                    @Column(name="Pincode")  var postCode:Long,
                    @ManyToOne(fetch = FetchType.LAZY)
                    @JoinColumn(foreignKey = ForeignKey(name = "Account_No"), name = "Account_No")
-                   var customer:Customer)
+                   var customer: Customer
+)
 
 

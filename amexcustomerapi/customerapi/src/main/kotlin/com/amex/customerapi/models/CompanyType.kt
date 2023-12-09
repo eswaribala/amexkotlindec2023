@@ -1,4 +1,4 @@
-package com.amex.customerapp.models
+package com.amex.customerapi.models
 
 enum class CompanyType {
     PUBLIC,PRIVATE,NONPROFIT
