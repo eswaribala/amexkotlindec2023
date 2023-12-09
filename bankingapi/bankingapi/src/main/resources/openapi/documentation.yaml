@@ -4,20 +4,38 @@ info:
   description: "Application API"
   version: "1.0.0"
 servers:
-  - url: "http://0.0.0.0:8080"
+  - url: "http://0.0.0.0:7070"
 paths:
-  /:
+  /customers:
     get:
-      description: "Hello World!"
+      summary: "GET customers"
       responses:
         "200":
           description: "OK"
-          content:
-            text/plain:
-              schema:
-                type: "string"
-              examples:
-                Example#1:
-                  value: "Hello World!"
+  /employees:
+    post:
+      summary: "POST employees"
+      responses:
+        "200":
+          description: "OK"
+  /json/jackson:
+    get:
+      summary: "GET json/jackson"
+      responses:
+        "200":
+          description: "OK"
+  /json/kotlinx-serialization:
+    get:
+      summary: "GET json/kotlinx-serialization"
+      responses:
+        "200":
+          description: "OK"
 components:
   schemas:
+    Pet:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        petType:
+          type: "string"
