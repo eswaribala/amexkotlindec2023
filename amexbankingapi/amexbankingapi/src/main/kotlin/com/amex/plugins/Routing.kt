@@ -21,11 +21,11 @@ fun Application.configureRouting() {
                 var individual=call.receive<Individual>()
                 if(dao.addIndividual(individual)) {
                     call.response.status(HttpStatusCode.OK)
-                    call.respond(ResponseWrapper<Individual>(individual))
+                    call.respond(individual)
                 }
                 else {
                     call.response.status(HttpStatusCode.BadRequest)
-                    call.respond(ResponseWrapper<String>("Object Not added"))
+                    call.respond("Object Not added")
                 }
 
                 call.respondText("Sending Customers.....")
