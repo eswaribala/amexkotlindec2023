@@ -1,4 +1,5 @@
 package com.amex.models
+@kotlinx.serialization.Serializable
 abstract class Customer{
 
     open val code="C"
