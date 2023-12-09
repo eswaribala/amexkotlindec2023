@@ -19,7 +19,7 @@ class IndividualController(private val individualService: IndividualService) {
           ResponseEntity.status(HttpStatus.BAD_REQUEST).body(DataWrapper("Could not Add Data"))
       }
   }
- @GetMapping("/v1.0/")
+ @GetMapping("/v2.0/")
   fun getAllIndividuals():List<Individual>{
          return this.individualService.getAllIndividuals()
   }
