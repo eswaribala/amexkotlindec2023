@@ -1,6 +1,6 @@
 package com.amex.customerapi.models
 
-import io.swagger.v3.oas.annotations.media.Schema
+//import io.swagger.v3.oas.annotations.media.Schema
 import jakarta.persistence.*
 import lombok.Data
 
@@ -13,7 +13,7 @@ open class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Account_No")
-    @Schema(hidden = true)
+   // @Schema(hidden = true)
    open var accountNumber:Long = 0
     @Embedded
    open lateinit var fullName: FullName
