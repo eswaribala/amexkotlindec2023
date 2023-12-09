@@ -12,17 +12,20 @@ paths:
       responses:
         "200":
           description: "OK"
-    /json/jackson:
-      get:
-        summary: "GET json/jackson"
-        responses:
-          "200":
-            description: "OK"
-    /json/kotlinx-serialization:
-      get:
-        summary: "GET json/kotlinx-serialization"
-        responses:
-          "200":
-            description: "OK"
+    put:
+      summary: "PUT customers"
+      responses:
+        "200":
+          description: "OK"
+    post:
+      summary: "POST customers"
+      responses:
+        "200":
+          description: "OK"
+    delete:
+      summary: "DELETE customers"
+      responses:
+        "200":
+          description: "OK"
 components:
   schemas:

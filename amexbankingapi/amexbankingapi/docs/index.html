@@ -706,8 +706,17 @@
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
                   <li class="nav-header" data-group="Default"><a href="#api-Default">API Methods - Default</a></li>
+                    <li data-group="Default" data-name="customersDelete" class="">
+                      <a href="#api-Default-customersDelete">customersDelete</a>
+                    </li>
                     <li data-group="Default" data-name="customersGet" class="">
                       <a href="#api-Default-customersGet">customersGet</a>
+                    </li>
+                    <li data-group="Default" data-name="customersPost" class="">
+                      <a href="#api-Default-customersPost">customersPost</a>
+                    </li>
+                    <li data-group="Default" data-name="customersPut" class="">
+                      <a href="#api-Default-customersPut">customersPut</a>
                     </li>
           </ul>
         </nav>
@@ -730,6 +739,214 @@
         <div id="sections">
                 <section id="api-Default">
                   <h1>Default</h1>
+                    <div id="api-Default-customersDelete">
+                      <article id="api-Default-customersDelete-0" data-group="User" data-name="customersDelete" data-version="0">
+                        <div class="pull-left">
+                          <h1>customersDelete</h1>
+                          <p>DELETE customers</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="delete"><code><span class="pln">/customers</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Default-customersDelete-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Default-customersDelete-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Default-customersDelete-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Default-customersDelete-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Default-customersDelete-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Default-customersDelete-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Default-customersDelete-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Default-customersDelete-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Default-customersDelete-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Default-customersDelete-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Default-customersDelete-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Default-customersDelete-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X DELETE\
+"http://localhost:7072/customers"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Default-customersDelete-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.customersDelete();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#customersDelete");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Default-customersDelete-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DefaultApi;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.customersDelete();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#customersDelete");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Default-customersDelete-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Default-customersDelete-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">
+DefaultApi *apiInstance = [[DefaultApi alloc] init];
+
+// DELETE customers
+[apiInstance customersDeleteWithCompletionHandler: 
+              ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersDelete-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ApplicationApi = require('application_api');
+
+var api = new ApplicationApi.DefaultApi()
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.customersDelete(callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Default-customersDelete-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Default-customersDelete-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class customersDeleteExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new DefaultApi();
+
+            try
+            {
+                // DELETE customers
+                apiInstance.customersDelete();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DefaultApi.customersDelete: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersDelete-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiDefaultApi();
+
+try {
+    $api_instance->customersDelete();
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->customersDelete: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersDelete-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::DefaultApi;
+
+my $api_instance = WWW::SwaggerClient::DefaultApi->new();
+
+eval { 
+    $api_instance->customersDelete();
+};
+if ($@) {
+    warn "Exception when calling DefaultApi->customersDelete: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersDelete-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+
+try: 
+    # DELETE customers
+    api_instance.customers_delete()
+except ApiException as e:
+    print("Exception when calling DefaultApi->customersDelete: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-Default-customersGet">
                       <article id="api-Default-customersGet-0" data-group="User" data-name="customersGet" data-version="0">
                         <div class="pull-left">
@@ -916,6 +1133,422 @@ try:
     api_instance.customers_get()
 except ApiException as e:
     print("Exception when calling DefaultApi->customersGet: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Default-customersPost">
+                      <article id="api-Default-customersPost-0" data-group="User" data-name="customersPost" data-version="0">
+                        <div class="pull-left">
+                          <h1>customersPost</h1>
+                          <p>POST customers</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/customers</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Default-customersPost-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Default-customersPost-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Default-customersPost-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Default-customersPost-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Default-customersPost-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Default-customersPost-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Default-customersPost-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Default-customersPost-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Default-customersPost-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Default-customersPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Default-customersPost-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Default-customersPost-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+"http://localhost:7072/customers"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Default-customersPost-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.customersPost();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#customersPost");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Default-customersPost-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DefaultApi;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.customersPost();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#customersPost");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Default-customersPost-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Default-customersPost-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">
+DefaultApi *apiInstance = [[DefaultApi alloc] init];
+
+// POST customers
+[apiInstance customersPostWithCompletionHandler: 
+              ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPost-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ApplicationApi = require('application_api');
+
+var api = new ApplicationApi.DefaultApi()
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.customersPost(callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Default-customersPost-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Default-customersPost-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class customersPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new DefaultApi();
+
+            try
+            {
+                // POST customers
+                apiInstance.customersPost();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DefaultApi.customersPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPost-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiDefaultApi();
+
+try {
+    $api_instance->customersPost();
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->customersPost: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPost-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::DefaultApi;
+
+my $api_instance = WWW::SwaggerClient::DefaultApi->new();
+
+eval { 
+    $api_instance->customersPost();
+};
+if ($@) {
+    warn "Exception when calling DefaultApi->customersPost: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPost-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+
+try: 
+    # POST customers
+    api_instance.customers_post()
+except ApiException as e:
+    print("Exception when calling DefaultApi->customersPost: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Default-customersPut">
+                      <article id="api-Default-customersPut-0" data-group="User" data-name="customersPut" data-version="0">
+                        <div class="pull-left">
+                          <h1>customersPut</h1>
+                          <p>PUT customers</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="put"><code><span class="pln">/customers</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Default-customersPut-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Default-customersPut-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Default-customersPut-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Default-customersPut-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Default-customersPut-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Default-customersPut-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Default-customersPut-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Default-customersPut-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Default-customersPut-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Default-customersPut-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Default-customersPut-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Default-customersPut-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
+"http://localhost:7072/customers"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Default-customersPut-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.customersPut();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#customersPut");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Default-customersPut-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DefaultApi;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.customersPut();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#customersPut");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Default-customersPut-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Default-customersPut-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">
+DefaultApi *apiInstance = [[DefaultApi alloc] init];
+
+// PUT customers
+[apiInstance customersPutWithCompletionHandler: 
+              ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPut-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ApplicationApi = require('application_api');
+
+var api = new ApplicationApi.DefaultApi()
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.customersPut(callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Default-customersPut-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Default-customersPut-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class customersPutExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new DefaultApi();
+
+            try
+            {
+                // PUT customers
+                apiInstance.customersPut();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DefaultApi.customersPut: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPut-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiDefaultApi();
+
+try {
+    $api_instance->customersPut();
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->customersPut: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPut-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::DefaultApi;
+
+my $api_instance = WWW::SwaggerClient::DefaultApi->new();
+
+eval { 
+    $api_instance->customersPut();
+};
+if ($@) {
+    warn "Exception when calling DefaultApi->customersPut: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-customersPut-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+
+try: 
+    # PUT customers
+    api_instance.customers_put()
+except ApiException as e:
+    print("Exception when calling DefaultApi->customersPut: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
