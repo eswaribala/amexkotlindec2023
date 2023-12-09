@@ -7,10 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.*
 
 @RequestMapping("/customers")
 class IndividualController(private val individualService: IndividualService) {
@@ -28,5 +25,38 @@ class IndividualController(private val individualService: IndividualService) {
          return this.individualService.getAllIndividuals()
   }
 
+
+  @GetMapping("/v1.0/{accountNo}")
+  fun getIndividualById(@PathVariable("accountNo") accountNo:Long):ResponseEntity<DataWrapper<Any>>{
+        var individual=this.individualService.getIndividualById(accountNo)
+        return if  (individual!=null){
+            ResponseEntity.status(HttpStatus.OK).body(DataWrapper(individual))
+        }else{
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body(DataWrapper("Could not be found"))
+        }
+
+  }
+
+    @PutMapping("/v1.0/{accountNo}/{contactNo}/{email}")
+    fun updateIndividualById(@PathVariable("accountNo") accountNo:Long,@PathVariable("contactNo") contactNo:Long,@PathVariable("email") email:String ):ResponseEntity<DataWrapper<Any>>{
+        var individual=this.individualService.updateIndividual(accountNo,contactNo,email)
+        return if  (individual!=null){
+            ResponseEntity.status(HttpStatus.OK).body(DataWrapper(individual))
+        }else{
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body(DataWrapper("Not found"))
+        }
+
+    }
+
+    @DeleteMapping("/v1.0/{accountNo}")
+    fun deleteIndividualById(@PathVariable("accountNo") accountNo:Long):ResponseEntity<DataWrapper<Any>>{
+        var status=this.individualService.deleteIndividualById(accountNo)
+        return if  (status){
+            ResponseEntity.status(HttpStatus.OK).body(DataWrapper("Deleted"))
+        }else{
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body(DataWrapper("Not deleted"))
+        }
+
+    }
 
 }

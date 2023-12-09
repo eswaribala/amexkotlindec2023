@@ -21,7 +21,7 @@ class IndividualService(private val individualRepository:IndividualRepository) {
 
     //select individual by id
 
-    fun getIndividualById(accountNo:Long):Individual?{
+    fun getIndividualById(accountNo:Long):Individual{
         return individualRepository.findById(accountNo).orElse(null)
     }
 
@@ -32,6 +32,16 @@ class IndividualService(private val individualRepository:IndividualRepository) {
             status=true
         }
         return status
+    }
+
+
+    fun updateIndividual(accountNo:Long,contactNo:Long, email:String):Individual{
+        var individual:Individual=getIndividualById(accountNo)
+        individual.email=email
+        individual.contactNumber=contactNo;
+        individualRepository.save(individual)
+        return individual
+
     }
 
 }
