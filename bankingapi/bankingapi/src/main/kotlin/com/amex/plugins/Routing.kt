@@ -25,7 +25,7 @@ fun Application.configureRouting() {
                call.respond(dao.getAllEmployees())
            }*/
 
-           post{
+           post<Employee>{
                val employee = call.receive<Employee>()
                val emp = call.receive<Employee>()
                dao.createEmployee(emp.name, emp.email, emp.city)
